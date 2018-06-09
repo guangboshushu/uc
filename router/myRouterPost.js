@@ -2,7 +2,7 @@ const subscribe = require('../api/user/subscribe')
 
 const routeSubscribe = (req, res, callback) => {
   subscribe(req, (e) => {
-    res.send(e)
+    callback(e)
   })
 }
 
