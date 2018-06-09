@@ -1,7 +1,7 @@
 const insertMysql = require('../../mysql/insertMysql.js')
 
 const subscribe = (req, callback) => {
-  let subscribe = req.query.subscribe
+  let subscribe = req.query.subscribe * 1
   let data = req.body
   data.regtime = new Date().getTime()
   console.log('action', typeof(subscribe))
