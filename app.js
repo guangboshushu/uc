@@ -28,7 +28,7 @@ app.use((err, req, res, next) => {
   res.send('hi , this is not a page')
 })
 
-let port = 8787
+let port = 1280
 app.listen(port, (req, res) => {
   console.log('-----------------------------------------------------------------------------------------------')
   console.log('|                               server is start, the port is : ' + port + '                            |')
