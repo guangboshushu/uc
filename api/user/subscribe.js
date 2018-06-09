@@ -4,12 +4,8 @@ const subscribe = (req, callback) => {
   let subscribe = req.query.subscribe * 1
   let data = req.body
   data.regtime = new Date().getTime()
-  console.log('action', typeof(subscribe))
-    console.log('action===0', subscribe===0)
   if(!subscribe) {
-    console.log('subscribe=0')
-    insertMysql('subscribe', data, res => {
-      console.log('222')
+    insertMysql('bookmark', data, res => {
       callback(res)
     })
   } else {
