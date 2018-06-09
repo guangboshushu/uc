@@ -10,6 +10,9 @@ const subscribe = (req, callback) => {
       console.log('222')
       callback(res)
     })
+  } else {
+    console.log('unsubs')
+    callback(null)
   }
 
 }
