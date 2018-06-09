@@ -1,8 +1,8 @@
 const insertMysql = require('../../mysql/insertMysql.js')
 
-const subscribe = ('subscribe', data, callback) => {
+const subscribe = (data, callback) => {
   console.log('111')
-  insertMysql(data, res => {
+  insertMysql('subscribe', data, res => {
     console.log('222')
     callback(res)
   })
