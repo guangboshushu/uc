@@ -6,7 +6,7 @@ const fetchSubscribe = (req, res, callback) => {
     callback(null)
     return false
   }
-  let fields = '*'
+  let fields = 'school_id'
   let table = 'bookmark'
   let query = ' openid = "' + openid + '" '
   selectSingle(fields, table, query, res => {

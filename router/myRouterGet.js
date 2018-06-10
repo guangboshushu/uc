@@ -35,6 +35,6 @@ const routeFetchSubscribe = (req, res, callback) => {
 const myFun = {
   '/api/search': routeSearch,
   '/api/fuzzy_search': routeFuzzySearch,
-  '/api/get_my_subscribrs': routeFetchSubscribe
+  '/api/get_my_subscribes': routeFetchSubscribe
 }
 module.exports = myFun
