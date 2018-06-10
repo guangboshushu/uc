@@ -13,6 +13,7 @@ const subscribe = (req, callback) => {
         bookmark: 'bookmark + 1',
         count: 'add'
       }
+      let query = 'id = ' + data.school_id
       updateMysql('school', schoolData, query, result => {
       })
       callback(res)
@@ -26,6 +27,7 @@ const subscribe = (req, callback) => {
         bookmark: 'bookmark - 1',
         count: 'add'
       }
+      let query = 'id = ' + data.school_id
       updateMysql('school', schoolData, query, result => {
       })
         callback(res)
