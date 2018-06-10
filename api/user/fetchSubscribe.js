@@ -1,15 +1,14 @@
 const selectSingle = require('../../mysql/selectSingle')
 
-const search = (req, res, callback) => {
-  let querys = req.query
-  if (!querys || !querys.school) {
+const fetchSubscribe = (req, res, callback) => {
+  let openid = req.query.openid
+  if (!openid) {
     callback(null)
     return false
   }
-  let schoolName = querys.school
   let fields = '*'
-  let table = 'school'
-  let query = ' name like "%'+schoolName+'%" '
+  let table = 'bookmark'
+  let query = ' openid = "' + openid + '" '
   selectSingle(fields, table, query, res => {
     if (res) {
       callback(res)
@@ -18,4 +17,4 @@ const search = (req, res, callback) => {
     }
   })
 }
-module.exports = search
+module.exports = fetchSubscribe
