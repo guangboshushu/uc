@@ -7,7 +7,7 @@ const search = (req, res, callback) => {
     return false
   }
   let schoolName = querys.school
-  let fields = '*'
+  let fields = '(id, name, ranking)'
   let table = 'school'
   let query = ' name like "%'+schoolName+'%" '
   selectSingle(fields, table, query, res => {
