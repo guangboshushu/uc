@@ -2,7 +2,9 @@ const selectSingle = require('../../mysql/selectSingle')
 
 const search = (req, res, callback) => {
   let querys = req.query
+  console.log('req.query', querys)
   if (!querys || !querys.school) {
+    console.log('req.query', 'no data')
     callback(null)
     return false
   }
@@ -11,6 +13,7 @@ const search = (req, res, callback) => {
   let table = 'school'
   let query = ' name like "%'+schoolName+'%" '
   selectSingle(fields, table, query, res => {
+    console.log('res', res)
     if (res) {
       callback(res)
     } else {
