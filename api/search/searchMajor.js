@@ -20,7 +20,7 @@ const search = (req, res, callback) => {
       }
       updateMysql(table, data, query, result => {})
 
-      let _query = ' major_name = "' + major_name + '" '
+      let _query = ' major_name = "' + major_name + '"  order by pay desc'
       selectSingle(fields, 'major', _query, result => {
         if (result) {
           res[0].major = result
